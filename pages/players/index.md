@@ -1,12 +1,24 @@
 ```sql players
 select
     name,
-    '/players/' || name as player_link,
+    position,
+    contract
 from motherduck.players
-group by name
+order by contract
+```
+
+<Dropdown 
+multiple=true data={players} name=position value=position 
+defaultValue={['D', 'F', 'G']}
+/>
+
+```sql filtered_query
+select *, '/players/' || name as player_link,
+from players
+where position in ${inputs.position.value}
 ```
 
 <DataTable
-    data={players}
+    data={filtered_query}
     link=player_link
 />
