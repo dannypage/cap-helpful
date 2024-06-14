@@ -30,10 +30,6 @@ from motherduck.players
 order by contract
 ```
 
-<Dropdown 
-multiple=true data={players} name=position value=position 
-/>
-
 <DataTable
     data={players}
     link=player_link
