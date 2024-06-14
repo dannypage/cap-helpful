@@ -12,7 +12,7 @@ select
     total_cap,
     total_signed,
     remaining_space,
-    '/team/' || name as team_link
+    '/teams/' || name as team_link
 from motherduck.team_with_contracts
 ```
 
