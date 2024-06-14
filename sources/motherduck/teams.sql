@@ -1,0 +1,1 @@
+select * from cap_helpful.teams;
